@@ -1,0 +1,16 @@
+{
+  "name": "Tandem/HW16",
+  "description": "HW16: Composer dependency manager",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Konstantin Tsybizov",
+      "email": "itandem@yandex.ru"
+    }
+  ],
+  "require": {
+    "yandex/geo":"^1.1"
+  }
+}
+
