@@ -2,7 +2,7 @@
     
     require __DIR__.'/vendor/autoload.php';
     
-    if($_GET['address'] ?? '') {
+    if(isset($_GET['address']) ? $_GET['address'] : '') {
         
         $address = $_GET['address'];
         $addressParam =
@@ -20,10 +20,10 @@
         
     }
     
-    $hasCoords = ($_GET['lat'] ?? '') && ($_GET['lng'] ?? '');
-    $mapLat = $_GET['lat'] ?? 55.751999;
-    $mapLng = $_GET['lng'] ?? 37.617734;
-    $mapAddress = $_GET['pureAddress'] ?? '';
+    $hasCoords = (isset($_GET['lat']) ? $_GET['lat'] : '') && (isset($_GET['lng']) ? $_GET['lng'] : '');
+    $mapLat = isset($_GET['lat']) ? $_GET['lat'] : 55.751999;
+    $mapLng = isset($_GET['lng']) ? $_GET['lng'] : 37.617734;
+    $mapAddress = isset($_GET['pureAddress']) ? $_GET['pureAddress'] : '';
     
     /**
      * Created by PhpStorm.

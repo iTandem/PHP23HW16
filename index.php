@@ -18,7 +18,7 @@
     <form action="" method="get" accept-charset="utf-8">
         <input type="text" name="address" value="" placeholder="Введите адрес">
         <button type="submit">Найти</button>
-        <?php if ($address ?? ''): ?>
+        <?php if (isset($address) ? $address : ''): ?>
             <p><strong>Исходный запрос: </strong><?= $response->getQuery(); ?></p>
             <p><strong>Найдено точек: </strong><?= $response->getFoundCount(); ?></p>
             <p>Для отображения на карте кликните на координаты.</p>
